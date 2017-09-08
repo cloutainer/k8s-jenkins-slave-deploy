@@ -35,4 +35,14 @@ RUN wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.k
 COPY util-wait-for-http-200.sh /usr/local/bin/util-wait-for-http-200.sh
 RUN chmod +x /usr/local/bin/util-wait-for-http-200.sh
 
+
+#
+# XML UTILS
+#
+COPY util-get-pom-xml-version.sh /usr/local/bin/util-get-pom-xml-version.sh
+RUN apt-get -qqy update && apt-get -qqy --no-install-recommends install xmlstarlet && \
+    chmod +x /usr/local/bin/util-get-pom-xml-version.sh
+
+
+
 USER root
