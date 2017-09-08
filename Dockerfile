@@ -29,4 +29,10 @@ RUN wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.k
     rm /etc/apt/sources.list.d/cloudfoundry-cli.list && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
+#
+# UTILS
+#
+COPY util-wait-for-http-200.sh /usr/local/bin/util-wait-for-http-200.sh
+RUN chmod +x /usr/local/bin/util-wait-for-http-200.sh
+
 USER root
