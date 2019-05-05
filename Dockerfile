@@ -1,4 +1,4 @@
-FROM cloutainer/k8s-jenkins-slave-base:v21
+FROM cloutainer/k8s-jenkins-slave-base:v22
 
 #
 # INSTALL AND CONFIGURE
@@ -19,15 +19,6 @@ RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s
 RUN curl -fsSL get.docker.com -o get-docker.sh && \
     sh get-docker.sh && \
     usermod -aG docker jenkins
-
-#
-# CLOUDFOUNDRY CLI
-#
-RUN wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add - && \
-    echo "deb http://packages.cloudfoundry.org/debian stable main" >> /etc/apt/sources.list.d/cloudfoundry-cli.list && \
-    apt-get update -qqy && apt-get -qqy install cf-cli && \
-    rm /etc/apt/sources.list.d/cloudfoundry-cli.list && \
-    rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 #
 # UTILS
