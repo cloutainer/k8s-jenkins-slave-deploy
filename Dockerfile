@@ -31,7 +31,7 @@ RUN chmod +x /usr/local/bin/util-wait-for-http-200.sh
 # XML UTILS
 #
 COPY util-get-pom-xml-version.sh /usr/local/bin/util-get-pom-xml-version.sh
-RUN apt-get -qqy update && apt-get -qqy --no-install-recommends install xmlstarlet && \
+RUN apt-get -qqy update && apt-get -qqy --no-install-recommends install xmlstarlet rsync && \
     chmod +x /usr/local/bin/util-get-pom-xml-version.sh
 
 
