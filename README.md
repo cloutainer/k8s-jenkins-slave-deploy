@@ -1,5 +1,7 @@
 <img src="https://cloutainer.github.io/documentation/images/cloutainer.svg?v5" align="right">
 
+### :bangbang: DEPRECATED AND ARCHIVED
+
 # k8s-jenkins-slave-deploy
 
 [![](https://codeclou.github.io/doc/badges/generated/docker-image-size-333.svg)](https://hub.docker.com/r/cloutainer/k8s-jenkins-slave-oracle-java/tags/) [![](https://codeclou.github.io/doc/badges/generated/docker-from-ubuntu-16.04.svg)](https://www.ubuntu.com/) [![](https://codeclou.github.io/doc/badges/generated/docker-run-as-root.svg)](https://docs.docker.com/engine/reference/builder/#/user)
